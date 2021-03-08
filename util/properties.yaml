@@ -1,0 +1,9 @@
+---
+name: unit_test_params
+description: >
+  "This is a unit test properties file for testing the APIs"
+
+#license_url : "/api/license-management/license"
+user_url : "/users/admin"
+#login_url : "/api/user/login"
+#otp_url : "/api/otp/license"

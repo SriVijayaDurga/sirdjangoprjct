@@ -1,0 +1,17 @@
+version: '3.7'
+
+networks:
+  isense_4i_net:
+    external: true
+    name: isense_4i_net
+
+services:
+  vicasapi:
+    container_name: vicasapi
+    image: $DOCKER_PRIVATE_HUB/vicasapi:latest
+    environment:
+      - settings=$INSTALL_DRIVE/$SENSE_SERVICE/settings.properties
+    ports:
+      - '8000:8000'
+    networks:
+      - isense_4i_net

@@ -1,0 +1,123 @@
+valid_payload = {
+    "machineid": 42682,
+    "buyer_company": "IRM",
+    "city": "BGR",
+    "country": "India",
+    "latitude": 66.2,
+    "longitude": 77.2,
+    "model": "LM21",
+    "pincode": 5342100,
+    "saledate": 1612171287000,
+    "sensor_nodeid": "0x124b001a52cfd3",
+    "state": "Karnataka",
+    "userid": "manager",
+    "machine_tagname": "L4M4",
+    "sensornode_id": "12",
+    "jobid": 2,
+    "opvolt": 10,
+    "minthreshold": 300,
+    "maxthreshold": 500,
+    "min_current_time": 500,
+    "max_current_time": 600,
+    "current_max_range": 450,
+    "min_voltage": 18,
+    "max_voltage": 24,
+    "min_wirefeed": 2,
+    "max_wirefeed": 5,
+    "min_gasflow": 23,
+    "max_gasflow": 34,
+    "load": 10,
+    "noload": 5,
+    "wiresize": 100
+}
+invalid_payload = {
+    "buyer_company": "IRM",
+    "city": "BGR",
+    "country": "India",
+    "latitude": 66.2,
+    "longitude": 77.2,
+    "model": "LM21",
+    "pincode": 5342100,
+    "saledate": 1612171287000,
+    "sensor_nodeid": "0x124b001a52cfd3",
+    "state": "Karnataka",
+    "userid": "manager",
+    "machine_tagname": "L4M4",
+    "sensornode_id": "12",
+    "jobid": 2,
+    "opvolt": 10,
+    "minthreshold": 300,
+    "maxthreshold": 500,
+    "min_current_time": 500,
+    "max_current_time": 600,
+    "current_max_range": 450,
+    "min_voltage": 18,
+    "max_voltage": 24,
+    "min_wirefeed": 2,
+    "max_wirefeed": 5,
+    "min_gasflow": 23,
+    "max_gasflow": 34,
+    "load": 10,
+    "noload": 5,
+    "wiresize": 100
+}
+
+update_machine_valid_payload = {
+    "buyer_company": "JRM",
+    "city": "BGR",
+    "country": "India",
+    "date_of_manufacture": 1612171287000,
+    "latitude": 66.2,
+    "longitude": 77.2,
+    "model": "LM21",
+    "pincode": 5342100,
+    "saledate": 1612171287000,
+    "sensor_nodeid": "0x124b001a52cfd3",
+    "state": "Karnataka",
+    "userid": "manager",
+    "machine_tagname": "L4M4",
+    "sensornode_id": "12",
+    "jobid": 2,
+    "opvolt": 10,
+    "minthreshold": 300,
+    "maxthreshold": 500,
+    "jobcreated": 1612171287000,
+    "min_current_time": 500,
+    "max_current_time": 600,
+    "current_max_range": 450,
+    "min_voltage": 18,
+    "max_voltage": 24,
+    "min_wirefeed": 2,
+    "max_wirefeed": 5,
+    "min_gasflow": 23,
+    "max_gasflow": 34,
+    "load": 10,
+    "noload": 5,
+    "wiresize": 100
+}
+
+update_machineconfig_valid_payload = {
+    "jobid": 1,
+    "minthreshold": 350,
+    "maxthreshold": 500,
+    "min_current_time": 500,
+    "max_current_time": 600,
+    "current_max_range": 450,
+    "min_voltage": 20,
+    "max_voltage": 30,
+    "min_wirefeed": 2,
+    "max_wirefeed": 5,
+    "min_gasflow": 23,
+    "max_gasflow": 34,
+    "jobcreated": 1612255697000
+
+}
+
+update_wirefeed_valid_payload = {
+    "initialstock": 600,
+    "lastupdated": 1612273397000
+}
+
+update_machine_warranty_valid_payload = {
+    "expirydate": 1612765872000
+}

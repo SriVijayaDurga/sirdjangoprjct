@@ -1,0 +1,1532 @@
+{
+	"info": {
+		"_postman_id": "5e67f95b-45eb-47c2-b9e9-8cc29f5367ff",
+		"name": "smartweld",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "authentication",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/user/authenticate",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "machine",
+			"item": [
+				{
+					"name": "machine_get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "machine_add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6ImFkbWluIiwibGFzdG5hbWUiOiJNIiwidXNlcm5hbWUiOiJhZG1pbiIsImFnZSI6MzAsImdlbmRlciI6Im1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjI0MjA1Nn0.nGX7eZotpKm1s28H68tn_Hzvbt6vD0kFFyz3Mr0EiBw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"machineid\":22456,\r\n    \"buyer_company\":\"IRM\",\r\n     \"city\":\"BGR\",\r\n    \"country\":\"India\",\r\n    \"latitude\":66.2,\r\n    \"longitude\":77.2,\r\n     \"model\":\"LM21\",\r\n    \"pincode\":5342100,\r\n    \"saledate\":1612171287000,\r\n    \"sensor_nodeid\":\"0x124b001a52cfd3\",\r\n    \"state\":\"Karnataka\",\r\n    \"userid\":\"manager\",\r\n    \"machine_tagname\":\"L4M4\",\r\n    \"sensornode_id\":\"12\",\r\n    \"jobid\":2,\r\n    \"opvolt\":10,\r\n    \"minthreshold\":300,\r\n    \"maxthreshold\":500,\r\n    \"min_current_time\":500,\r\n    \"max_current_time\":600,\r\n    \"current_max_range\":450,\r\n    \"min_voltage\":18,\r\n    \"max_voltage\":24,\r\n    \"min_wirefeed\":2,\r\n    \"max_wirefeed\":5,\r\n    \"min_gasflow\":23,\r\n    \"max_gasflow\":34\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/machines",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"machines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "machine_update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6ImFkbWluIiwibGFzdG5hbWUiOiJNIiwidXNlcm5hbWUiOiJhZG1pbiIsImFnZSI6MzAsImdlbmRlciI6Im1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMTgwOTYzM30.ReFr9TCVNRExRojePMHk-oF6iqt4ab9XZCMB4a0q5Og",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"machineid\":554456,\r\n    \"machine_model\":\"L2M5\",\r\n    \"min_current\":500,\r\n    \"max_current\":600,\r\n    \"max_current_range\":450,\r\n    \"min_voltage\":18,\r\n    \"max_voltage\":24,\r\n    \"min_wirefeed\":2,\r\n    \"max_wirefeed\":5,\r\n    \"min_gasflow\":23,\r\n    \"max_gasflow\":40\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/machines",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"machines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "machine_delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6ImFkbWluIiwibGFzdG5hbWUiOiJNIiwidXNlcm5hbWUiOiJhZG1pbiIsImFnZSI6MzAsImdlbmRlciI6Im1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjI0MjA1Nn0.nGX7eZotpKm1s28H68tn_Hzvbt6vD0kFFyz3Mr0EiBw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/machines/54",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"machines",
+								"54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-livedata",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YSIsImxhc3RuYW1lIjoiZHVyZ2EiLCJ1c2VybmFtZSI6ImR1cmdhIiwiYWdlIjoyMCwiZ2VuZGVyIjoiZmVtYWxlIiwicm9sZSI6MSwiZW50aXR5X2lkIjoxLCJzdGF0dXMiOnRydWUsInBlcm1pc3Npb24iOnsicmVhZCI6dHJ1ZSwiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwiZG93bmxvYWQiOnRydWUsInZpZXciOnRydWV9LCJleHAiOjE2MTMwMjEwMzB9.fnZa0UJnU230NBInFyh3FcgL-QcG2v-NxmJF0LO7-ZU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/machines/get-live-data/56324",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"machines",
+								"get-live-data",
+								"56324"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_selected_machine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YSIsImxhc3RuYW1lIjoiZHVyZ2EiLCJ1c2VybmFtZSI6ImR1cmdhIiwiYWdlIjoyMCwiZ2VuZGVyIjoiZmVtYWxlIiwicm9sZSI6MSwiZW50aXR5X2lkIjoxLCJzdGF0dXMiOnRydWUsInBlcm1pc3Npb24iOnsicmVhZCI6dHJ1ZSwiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwiZG93bmxvYWQiOnRydWUsInZpZXciOnRydWV9LCJleHAiOjE2MTM1NDQyMDJ9.VFxh7VLXMFvTMryJs330aFhVwCL0mSulkqtR79_EfBk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/machines/10102",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"machines",
+								"10102"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count_warrantydetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upgrade_warranty",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YSIsImxhc3RuYW1lIjoiZHVyZ2EiLCJ1c2VybmFtZSI6InZpamF5YWR1cmdhIiwiYWdlIjoyMiwiZ2VuZGVyIjoiZmVtYWxlIiwicm9sZSI6MSwiZW50aXR5X2lkIjoxLCJzdGF0dXMiOnRydWUsInBlcm1pc3Npb24iOnsicmVhZCI6dHJ1ZSwiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwiZG93bmxvYWQiOnRydWUsInZpZXciOnRydWV9LCJleHAiOjE2MTI4NDQ3MjJ9.SU0NeKqliLOWXPzLZovOVuKPxHeI3lTkeeKaoWWWgho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"expirydate\": 1612765872000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/machines/warranty/221144",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"machines",
+								"warranty",
+								"221144"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_warranty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_machine_config_by_machineid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YSIsImxhc3RuYW1lIjoiZHVyZ2EiLCJ1c2VybmFtZSI6InZpamF5YWR1cmdhIiwiYWdlIjoyMiwiZ2VuZGVyIjoiZmVtYWxlIiwicm9sZSI6MSwiZW50aXR5X2lkIjoxLCJzdGF0dXMiOnRydWUsInBlcm1pc3Npb24iOnsicmVhZCI6dHJ1ZSwiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwiZG93bmxvYWQiOnRydWUsInZpZXciOnRydWV9LCJleHAiOjE2MTI4NDQ3MjJ9.SU0NeKqliLOWXPzLZovOVuKPxHeI3lTkeeKaoWWWgho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n      \"jobid\":3,\r\n    \"minthreshold\":350,\r\n    \"maxthreshold\":500,\r\n    \"min_current_time\":500,\r\n    \"max_current_time\":600,\r\n    \"current_max_range\":450,\r\n    \"min_voltage\":20,\r\n    \"max_voltage\":30,\r\n    \"min_wirefeed\":2,\r\n    \"max_wirefeed\":5,\r\n    \"min_gasflow\":23,\r\n    \"max_gasflow\":34,\r\n    \"jobcreated\":1612255697000\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/machines/config/331177",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"machines",
+								"config",
+								"331177"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_wirefeed",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YSIsImxhc3RuYW1lIjoiZHVyZ2EiLCJ1c2VybmFtZSI6InZpamF5YWR1cmdhIiwiYWdlIjoyMiwiZ2VuZGVyIjoiZmVtYWxlIiwicm9sZSI6MSwiZW50aXR5X2lkIjoxLCJzdGF0dXMiOnRydWUsInBlcm1pc3Npb24iOnsicmVhZCI6dHJ1ZSwiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwiZG93bmxvYWQiOnRydWUsInZpZXciOnRydWV9LCJleHAiOjE2MTI4NDQ3MjJ9.SU0NeKqliLOWXPzLZovOVuKPxHeI3lTkeeKaoWWWgho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/machines/wirefeed/331177",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"machines",
+								"wirefeed",
+								"331177"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_wirefeed",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YSIsImxhc3RuYW1lIjoiZHVyZ2EiLCJ1c2VybmFtZSI6InZpamF5YWR1cmdhIiwiYWdlIjoyMiwiZ2VuZGVyIjoiZmVtYWxlIiwicm9sZSI6MSwiZW50aXR5X2lkIjoxLCJzdGF0dXMiOnRydWUsInBlcm1pc3Npb24iOnsicmVhZCI6dHJ1ZSwiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwiZG93bmxvYWQiOnRydWUsInZpZXciOnRydWV9LCJleHAiOjE2MTI4NDQ3MjJ9.SU0NeKqliLOWXPzLZovOVuKPxHeI3lTkeeKaoWWWgho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"initialstock\":700,\r\n    \"lastupdated\":1612273397000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/machines/wirefeed/331177",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"machines",
+								"wirefeed",
+								"331177"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "report_get_data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "home",
+			"item": [
+				{
+					"name": "totai_wirefeed_left",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_home_overview",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_hourly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "report",
+			"item": [
+				{
+					"name": "get_report_details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_daily_report",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "power_report_analysis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user_read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6ImFkbWluIiwibGFzdG5hbWUiOiJNIiwidXNlcm5hbWUiOiJhZG1pbiIsImFnZSI6MzAsImdlbmRlciI6Im1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMTgwOTYzM30.ReFr9TCVNRExRojePMHk-oF6iqt4ab9XZCMB4a0q5Og",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\":23,\r\n    \"city\":\"BGR\",\r\n    \"contact_number\":9632587410,\r\n    \"country\":\"India\",\r\n    \"firstname\":\"vijaya\",\r\n    \"gender\":\"female\",\r\n    \"lastname\":\"durga\",\r\n    \"mail_id\":\"vijaya123@gmail.com\",\r\n    \"pincode\":72486,\r\n    \"role\":1,\r\n    \"state\":\"Karnataka\",\r\n    \"status\":true,\r\n    \"username\":\"vijaya1\"\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6ImFkbWluIiwibGFzdG5hbWUiOiJNIiwidXNlcm5hbWUiOiJhZG1pbiIsImFnZSI6MzAsImdlbmRlciI6Im1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMTg5NzQ3Nn0.blwGQm7rh6OxHXnrnHeKBWxtRFMwoMYCYHb6ozFitkk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users?username=vijaya",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "vijaya"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6ImFkbWluIiwibGFzdG5hbWUiOiJNIiwidXNlcm5hbWUiOiJhZG1pbiIsImFnZSI6MzAsImdlbmRlciI6Im1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMTgwOTYzM30.ReFr9TCVNRExRojePMHk-oF6iqt4ab9XZCMB4a0q5Og",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\":22,\r\n    \"city\":\"BGR\",\r\n    \"contact_number\":9632587410,\r\n    \"country\":\"India\",\r\n    \"firstname\":\"vijaya\",\r\n    \"gender\":\"female\",\r\n    \"lastname\":\"durga\",\r\n    \"mail_id\":\"vijaya123@gmail.com\",\r\n    \"password\":\"vijaya@123\",\r\n    \"pincode\":72486,\r\n    \"role\":1,\r\n    \"state\":\"Karnataka\",\r\n    \"status\":true,\r\n    \"username\":\"vijaya1\"\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single_user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "welder",
+			"item": [
+				{
+					"name": "welder_read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "welder_mapping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "welder_add",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "welder_update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjU4OTMzMH0.9VftFs7ZdpMl1Bl5iXFDXPsVB4N_QsGno5C-BQWS8mg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"syam3\",\r\n    \"lastname\":\"m\",\r\n    \"age\":40,\r\n    \"phone\":9876543560,\r\n    \"proficiency\":\"intermediate\",\r\n    \"gender\":\"female\",\r\n    \"id\":4\r\n\r\n    \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/welder/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"welder",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "welder_delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjUwMzY2OH0.iEO6LMqtuCizwAMTumGfZOglTf5gaxABpsLbEWAVgSI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/welder/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"welder",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "welder_mapping_insert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6ImFkbWluIiwibGFzdG5hbWUiOiJNIiwidXNlcm5hbWUiOiJhZG1pbiIsImFnZSI6MzAsImdlbmRlciI6Im1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMTgwOTYzM30.ReFr9TCVNRExRojePMHk-oF6iqt4ab9XZCMB4a0q5Og",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"machineid\":12345,\r\n    \"welder_name\":\"vijaya durga\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/welder/mapping",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"welder",
+								"mapping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "welder_mapping_update",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_welder_machine_mapping",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjUwMzY2OH0.iEO6LMqtuCizwAMTumGfZOglTf5gaxABpsLbEWAVgSI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/mapping",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"mapping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "welder_macine_mapping_delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjUwMzY2OH0.iEO6LMqtuCizwAMTumGfZOglTf5gaxABpsLbEWAVgSI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/mapping",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"mapping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unmapped_welder_machine_mapping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "node",
+			"item": [
+				{
+					"name": "add_node",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjQxNzIwM30.XsMRdqgPQ3RHFx9U_o1xLV1YlTdPAVIcVoMoCY8b0Js",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nodeaddr\":\"0x124b001be46200\",\r\n    \"gateway_mac_id\":\"04:a3:16:b0:ec:15\", \r\n    \"commission\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/node",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"node"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_node",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjQxNzIwM30.XsMRdqgPQ3RHFx9U_o1xLV1YlTdPAVIcVoMoCY8b0Js",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nodeaddr\":\"0x124b001be46200\",\r\n    \"gateway_mac_id\":\"04:a3:16:b0:ec:20\", \r\n    \"commission\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/node",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"node"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_nodes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_selected_node",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjQxNzIwM30.XsMRdqgPQ3RHFx9U_o1xLV1YlTdPAVIcVoMoCY8b0Js",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/node/u101",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"node",
+								"u101"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_node",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YSIsImxhc3RuYW1lIjoiZHVyZ2EiLCJ1c2VybmFtZSI6InZpamF5YWR1cmdhIiwiYWdlIjoyMiwiZ2VuZGVyIjoiZmVtYWxlIiwicm9sZSI6MSwiZW50aXR5X2lkIjoxLCJzdGF0dXMiOnRydWUsInBlcm1pc3Npb24iOnsicmVhZCI6dHJ1ZSwiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwiZG93bmxvYWQiOnRydWUsInZpZXciOnRydWV9LCJleHAiOjE2MTI4NjM5NDd9.eD1y_ufPLh90JeabH1EEor2K01xqmj7glSLPznzCTdU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/nodes/0x124b001be46200",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"nodes",
+								"0x124b001be46200"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "predictions",
+			"item": [
+				{
+					"name": "get_warranty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_wirefeed",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_fault",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjQxNzIwM30.XsMRdqgPQ3RHFx9U_o1xLV1YlTdPAVIcVoMoCY8b0Js",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/fault",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"fault"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_fault_bydate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket",
+			"item": [
+				{
+					"name": "add_ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjUwMzY2OH0.iEO6LMqtuCizwAMTumGfZOglTf5gaxABpsLbEWAVgSI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"machineid\":221177,\r\n    \"cause\":\"Motor\",\r\n    \"remark\":\"Vibration\",\r\n    \"severity\": 1,\r\n    \"ticket_status\":\"In Progress\",\r\n    \"closed_date\":1612419870000,\r\n    \"reported_date\":1612419870000\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/ticket",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjUwMzY2OH0.iEO6LMqtuCizwAMTumGfZOglTf5gaxABpsLbEWAVgSI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"machineid\":221177,\r\n    \"cause\":\"Motor\",\r\n    \"remark\":\"still heating\",\r\n    \"severity\": 1,\r\n    \"ticket_status\":\"In Progress\",\r\n    \"closed_date\":1612419870000,\r\n    \"reported_date\":1612419870000,\r\n    \"ticketid\":2\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/ticket",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_tickets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_selected_ticket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_live_tickets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "configurations",
+			"item": [
+				{
+					"name": "get_report_config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_report_config",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjU4OTMzMH0.9VftFs7ZdpMl1Bl5iXFDXPsVB4N_QsGno5C-BQWS8mg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"welder_daily_available\": 20,\r\n    \"weld_power_consume\": 12,\r\n    \"power_rate_unit\": 11,\r\n    \"idle_power_consume\": 11,\r\n    \"daily_labour_rate\": 444,\r\n    \"daily_shift_hour\": 11\r\n        \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/configurations/report",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"configurations",
+								"report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_machine_input",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_machine_input",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YSIsImxhc3RuYW1lIjoiZHVyZ2EiLCJ1c2VybmFtZSI6InZpamF5YWR1cmdhIiwiYWdlIjoyMiwiZ2VuZGVyIjoiZmVtYWxlIiwicm9sZSI6MSwiZW50aXR5X2lkIjoxLCJzdGF0dXMiOnRydWUsInBlcm1pc3Npb24iOnsicmVhZCI6dHJ1ZSwiY3JlYXRlIjp0cnVlLCJ1cGRhdGUiOnRydWUsImRlbGV0ZSI6dHJ1ZSwiZG93bmxvYWQiOnRydWUsInZpZXciOnRydWV9LCJleHAiOjE2MTI4NDQ3MjJ9.SU0NeKqliLOWXPzLZovOVuKPxHeI3lTkeeKaoWWWgho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"machineid\":112200,\r\n    \"ts\":1612789459000,\r\n    \"cycle_time\":40,\r\n    \"produced\":1000,\r\n    \"rejected\":20,\r\n    \"entity_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/configurations/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"configurations",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gateway",
+			"item": [
+				{
+					"name": "add_gateway",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjU4OTMzMH0.9VftFs7ZdpMl1Bl5iXFDXPsVB4N_QsGno5C-BQWS8mg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gateway_macid\":\"04:a2:1d:5d:w4:40\",\r\n    \"gateway_id\":\"u101\",\r\n    \"commission\":1,\r\n    \"userid\":\"admin\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/gateway",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"gateway"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_gateway",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjU4OTMzMH0.9VftFs7ZdpMl1Bl5iXFDXPsVB4N_QsGno5C-BQWS8mg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gateway_macid\":\"04:a2:1d:5d:w4:41\",\r\n    \"gateway_id\":\"u104\",\r\n    \"commission\":1,\r\n    \"userid\":\"admin\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/gateway",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"gateway"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_gateways",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjU4OTMzMH0.9VftFs7ZdpMl1Bl5iXFDXPsVB4N_QsGno5C-BQWS8mg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/gateway",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"gateway"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_selected_gateway",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_gateway",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJ1c2VyaWQiOiJhZG1pbiIsImZpcnN0bmFtZSI6InZpamF5YTEiLCJsYXN0bmFtZSI6ImR1cmdhMSIsInVzZXJuYW1lIjoidmlqYXlhZHVyZ2EiLCJhZ2UiOjIyLCJnZW5kZXIiOiJmZW1hbGUiLCJyb2xlIjoxLCJlbnRpdHlfaWQiOjEsInN0YXR1cyI6dHJ1ZSwicGVybWlzc2lvbiI6eyJyZWFkIjp0cnVlLCJjcmVhdGUiOnRydWUsInVwZGF0ZSI6dHJ1ZSwiZGVsZXRlIjp0cnVlLCJkb3dubG9hZCI6dHJ1ZSwidmlldyI6dHJ1ZX0sImV4cCI6MTYxMjU4OTMzMH0.9VftFs7ZdpMl1Bl5iXFDXPsVB4N_QsGno5C-BQWS8mg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/gateways/u103",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"gateways",
+								"u103"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

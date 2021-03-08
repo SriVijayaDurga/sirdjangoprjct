@@ -1,0 +1,35 @@
+- model: util.users
+  fields:
+    id: 1
+    username: admin
+    age: 20
+    city: Bangalore
+    contact_number: 1234567890
+    country: India
+    firstname: admin
+    lastname: admin
+    gender: female
+    email: admin@livnsense.com
+    password: admin@123
+    pincode: 500123
+    role: 1
+    state: Karnataka
+    entity_id: 1
+    userid: admin
+    status: True
+
+- model: util.rolemaster
+  fields:
+    id: 1
+    name: admin
+    description: Admin
+    role_code: admin
+    can_read: True
+    can_create: True
+    can_update: True
+    can_delete: True
+    can_download: True
+    can_map: True
+    can_view: True
+    entity_id: 1
+    status: True
